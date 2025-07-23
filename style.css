@@ -17,6 +17,7 @@
 
   --navy-950: 226 43% 10%;
   --navy-900: 235 46% 20%;
+  --navy-500: 236 41% 34%; /* for hover */
   --purple-500: 235 45% 61%;
   --navy-200: 236 100% 87%;
   /* radius size */
@@ -141,6 +142,10 @@ body {
   background-color: hsl(var(--navy-900));
   padding: 1.3rem;
   border-radius: var(--radius-50);
+}
+.card_content:hover {
+  background-color: hsl(var(--navy-500));
+  cursor: pointer;
 }
 .time_period {
   display: flex;
