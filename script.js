@@ -94,13 +94,17 @@ const appendItem = (item) => {
   const title = item.title.trim().replace(/\s+/g, "-");
   todo.innerHTML = `
   <div class="card bg-${title}">
-      <div class="image-container"><img src="images/icon-${title}.svg"></div>
+      <div class="image-container"><img src="images/icon-${title.toLowerCase()}.svg"></div>
   
     <div class="card_content">
-        <div class="card_title">${item.title}<img src="images/icon-ellipsis.svg"></div>
+        <div class="card_title">${
+          item.title
+        }<img src="images/icon-ellipsis.svg"></div>
         <div class="time_period"> 
           <div class="time">${item.timeframes.weekly.current}hrs</div>
-          <div class="last_week"><div class="last_text">Last Week</div> - <div class="last_hrs">${item.timeframes.weekly.previous}hrs</div></div>
+          <div class="last_week"><div class="last_text">Last Week</div> - <div class="last_hrs">${
+            item.timeframes.weekly.previous
+          }hrs</div></div>
         </div>
     </div>
   </div>`;
