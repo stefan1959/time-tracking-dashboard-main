@@ -1,0 +1,212 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --purple-600: 246 80% 60%;
+
+  --orange-300: 15 100% 70%;
+  --blue-300: 195 74% 62%;
+  --pink-400: 348 100% 68%;
+  --green-400: 145 58% 55%;
+  --purple-700: 264 64% 52%;
+  --yellow-300: 43 84% 65%;
+  --white: 0 0% 100%;
+
+  /* ### Neutral */
+
+  --navy-950: 226 43% 10%;
+  --navy-900: 235 46% 20%;
+  --purple-500: 235 45% 61%;
+  --navy-200: 236 100% 87%;
+  /* radius size */
+  --radius-50: 0.5rem;
+  --height-100: 2rem;
+}
+.bg-Work {
+  background-color: hsl(var(--orange-300));
+}
+.bg-Play {
+  background-color: hsl(var(--blue-300));
+}
+.bg-Study {
+  background-color: hsl(var(--pink-400));
+}
+.bg-Exercise {
+  background-color: hsl(var(--green-400));
+}
+.bg-Social {
+  background-color: hsl(var(--purple-700));
+}
+.bg-Self-Care {
+  background-color: hsl(var(--yellow-300));
+}
+@font-face {
+  font-family: "Rubik";
+  src: url(/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "Rubik";
+  font-size: 1.125rem;
+  display: grid;
+  place-content: center;
+  background-color: hsl(var(--navy-950));
+  color: hsl(var(--white));
+  min-height: 100vh;
+}
+.time-tracking-container {
+  padding: 1rem;
+}
+.time-tracking-header {
+  display: grid;
+  background-color: hsl(var(--navy-900));
+  border-radius: var(--radius-50);
+}
+.time-tracking-title {
+  background-color: hsl(var(--purple-600));
+  color: hsl(var(--navy-200));
+  font-size: 0.6rem;
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: var(--radius-50);
+}
+.user-name {
+  color: hsl(var(--white));
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.user-image img {
+  border: 2px solid hsl(var(--white));
+  border-radius: 50%;
+  overflow: hidden;
+}
+.time-tracking-selection {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 10px;
+  border-bottom-right-radius: var(--radius-50);
+  border-bottom-left-radius: var(--radius-50);
+}
+.period {
+  color: hsl(var(--navy-200) / 0.3);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.active {
+  color: hsl(var(--navy-200));
+}
+.time-tracking {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.image-container {
+  overflow: hidden;
+  height: 1.8rem;
+  border-top-right-radius: var(--radius-50);
+  border-top-left-radius: var(--radius-50);
+}
+
+.card {
+  display: grid;
+  border-radius: var(--radius-50);
+}
+.card_title {
+  font-size: 1rem;
+  color: hsl(var(--white));
+  font-weight: 300;
+}
+.card_title img {
+  width: 35px;
+}
+.time {
+  font-size: 1.1rem;
+}
+.time-tracking img {
+  position: relative;
+  margin-top: -10px;
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.card_content {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+  background-color: hsl(var(--navy-900));
+  padding: 1.3rem;
+  border-radius: var(--radius-50);
+}
+.time_period {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.last_week {
+  display: flex;
+  gap: 0.2rem;
+  color: hsl(var(--navy-200));
+}
+@media (min-width: 500px) {
+  .time-tracking {
+    grid-template-columns: 1fr 1fr;
+    .time_period {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+@media (min-width: 800px) {
+  .time-tracking {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
+}
+@media (min-width: 1100px) {
+  .time-tracking-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .card {
+    min-width: 200px;
+  }
+  .card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .time-tracking-selection {
+    flex-direction: column;
+  }
+  .time-tracking-header {
+    max-width: 200px;
+  }
+  .time-tracking-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .time {
+    font-size: 2.5rem;
+  }
+  .user-name {
+    font-size: 2rem;
+    font-weight: 300;
+    padding-top: 0.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+/* Attribution styles */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
